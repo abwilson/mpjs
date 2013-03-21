@@ -1,0 +1,1 @@
+link(wijkhkhjkj ) foo[] := 'BAR'

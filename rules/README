@@ -1,0 +1,9 @@
+This directory should contain mark pascal clearing rules files which I
+obviously don't want to post up onto github. The easiest way to go is
+to tar up the rules dir from dev/templates/rules, untar if here, then
+from the parent directory run:
+
+$ make rename_rules
+
+This will convert all the nasty mark pascal filenames into unix
+friendly ones.

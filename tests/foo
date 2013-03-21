@@ -1,0 +1,14 @@
+boolean b := true;
+boolean b[];
+boolean b[] = 1;
+
+datetime dt;
+duration d;
+link(IRS) l;
+money(2) m;
+numeric(5) n;
+rate r;
+string s
+      
+
+numeric(9) i[] := 980980.0
