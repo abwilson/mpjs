@@ -310,22 +310,32 @@ class exports.StringLiteral extends exports.Literal
     #
     # Split a string by ; keeping only the bits that aren't ;s.
     # 
-    toArrayImp = (l) ->
+    # toArrayImp = (l) ->
+    #     #        (i.replace /^\s*|\s*$/, '') for i in l.match /([^;]*)/g by 2
+    #     l
+
+    splitBySemi = (l) ->
         (i.replace /^\s*|\s*$/, '') for i in l.match /([^;]*)/g by 2
 
+    toArrayImp = (l) ->
+        o = {}
+        for e in splitBySemi l
+            o[e] = null
+        stringify o
+
     emitList: (buf) ->
-        result = stringify (toArrayImp @text) #, null, idt
-        log 'StringLiteral.emitList', result
+        result = toArrayImp @text #, null, idt
+        _log 'StringLiteral.emitList', result
         buf.put result
 
     isList: ->
-        log 'StringLiteral.isList:', @text
+        _log 'StringLiteral.isList:', @text
         @emitImpl = @emitList
     #
     # And the same for key:value:desc.
     # 
     toObject: (buf) ->
-        log 'toObject enter'
+        _log 'toObject enter'
         if @text.match /^{.*}$/
             _log 'StringLitteral.toObject', @text
             @text = @text.slice(1, -1)
@@ -333,7 +343,7 @@ class exports.StringLiteral extends exports.Literal
             buf.put new exports.Function @lineno, 'getList', new StringLiteral @lineno, @text
             return
         r = {}
-        for i in toArrayImp @text
+        for i in splitBySemi @text
             try
                 [_, k, v, d] = i.match /([^:]*):([^:]*):([^;]*);?/
                 r[k] = value: v, description: d
@@ -439,11 +449,20 @@ class exports.Function extends SyntaxNode
                 checkArgs args, 1
                 buf.put '@[', args, ']?'
 
-        ListContains:
-            impl: (buf, args) ->
-                checkArgs args, 2
-                buf.put '(', args.rest[0], ' in (', args.first, ' or []))'
-            typeF: specialArgs 'isList', 1
+        # ListContains:
+        #     impl: (buf, args) ->
+        #         checkArgs args, 2
+        #         # buf.put '(', args.rest[0], ' in (', args.first, ' or []))'
+        #         buf.put '(', args.first, '.indexOf ', args.rest[0], ') != -1'
+        #     typeF: specialArgs 'isList', 1
+
+        # ListContains:
+        #     impl: (buf, args) ->
+        #         checkArgs args, 2
+        #         # buf.put '(', args.rest[0], ' in (', args.first, ' or []))'
+        #         buf.put '(', args.first, '? and ', args.rest[0], ' of ', args.first, ')'
+        #         # buf.put '(', args.first, '.indexOf ', args.rest[0], ') != -1'
+        #     typeF: specialArgs 'isList', 1
         
         ListData:
             impl: (buf, args) -> listProp buf, args, 'data'
@@ -663,17 +682,17 @@ class exports.VariableRef extends SyntaxNode
             @error 'undefined', "#{@name} undefined in #{n for n of symbolTable}"
     emitImpl: (buf) -> buf.put @name
     isList: ->
-        log 'VariableRef.isList', @name
+        _log 'VariableRef.isList', @name
         symbolTable[@name]?.isList()
     isObject: ->
-        log 'VariableRef.isObject', @name
+        _log 'VariableRef.isObject', @name
         symbolTable[@name]?.isObject()
 
 class exports.Parens extends SyntaxNode
     constructor: (lineno, @stmts) -> super(lineno)
     emitImpl:    (buf)            -> buf.put '(', @stmts, ')'
     isList:                       -> @stmts.isList()
-    isObject:                       -> @stmts.isObject()
+    isObject:                     -> @stmts.isObject()
 
 class exports.WhileStmt extends SyntaxNode
     constructor: (lineno, @cond, @body) ->

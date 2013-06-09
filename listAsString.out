@@ -1,0 +1,274 @@
+-*- mode: compilation; default-directory: "~/Documents/volcano_consultancy/git/mpjs/" -*-
+Compilation started at Sat Mar 23 12:38:02
+
+make -k -j2
+coffee -c functions.coffee
+node mpjs.js tests/array_ops.mp -o tests/array_ops.coffee
+node mpjs.js tests/assignment.mp -o tests/assignment.coffee
+node mpjs.js tests/attribute.mp -o tests/attribute.coffee
+StringLiteral.isList: foo;bar;wibble
+StringLiteral.isList: foo;bar;wibble
+StringLiteral.emitList "foo;bar;wibble"
+StringLiteral.emitList "foo;bar;wibble"
+node mpjs.js tests/comp.mp -o tests/comp.coffee
+node mpjs.js tests/declaration1.mp -o tests/declaration1.coffee
+node mpjs.js tests/for.mp -o tests/for.coffee
+node mpjs.js tests/func_call.mp -o tests/func_call.coffee
+node mpjs.js tests/function.mp -o tests/function.coffee
+node mpjs.js tests/identifier.mp -o tests/identifier.coffee
+node mpjs.js tests/if.mp -o tests/if.coffee
+node mpjs.js tests/if_else.mp -o tests/if_else.coffee
+node mpjs.js tests/link1.mp -o tests/link1.coffee
+node mpjs.js tests/link2.mp -o tests/link2.coffee
+node mpjs.js tests/logic.mp -o tests/logic.coffee
+StringLiteral.isList: BAR
+StringLiteral.emitList "BAR"
+node mpjs.js tests/math.mp -o tests/math.coffee
+node mpjs.js tests/misc1.mp -o tests/misc1.coffee
+node mpjs.js tests/misc2.mp -o tests/misc2.coffee
+node mpjs.js tests/misc3.mp -o tests/misc3.coffee
+node mpjs.js tests/misc4.mp -o tests/misc4.coffee
+node mpjs.js tests/misc5.mp -o tests/misc5.coffee
+node mpjs.js tests/number.mp -o tests/number.coffee
+node mpjs.js tests/rule.mp -o tests/rule.coffee
+node mpjs.js tests/stringliteral1.mp -o tests/stringliteral1.coffee
+node mpjs.js tests/sum.mp -o tests/sum.coffee
+node mpjs.js tests/switch.mp -o tests/switch.coffee
+node mpjs.js tests/systemAttribue.mp -o tests/systemAttribue.coffee
+node mpjs.js tests/toObject.mp -o tests/toObject.coffee
+node mpjs.js tests/while.mp -o tests/while.coffee
+toObject enter
+node mpjs.js rules/clearing_rules_common.ruleheader.mp -o rules/clearing_rules_common.ruleheader.coffee
+node mpjs.js rules/opening_hours_rules_common.ruleheader.mp -o rules/opening_hours_rules_common.ruleheader.coffee
+VariableRef.isList centres
+VariableRef.isList centres
+VariableRef.isList list2
+VariableRef.isList list2
+node mpjs.js rules/Eligible_For_Interoperability.rulebase.mp -o rules/Eligible_For_Interoperability.rulebase.coffee
+node mpjs.js rules/markitwire_clearing_rules_common.ruleheader.mp -o rules/markitwire_clearing_rules_common.ruleheader.coffee
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+coffee -c tests/array_ops.coffee
+coffee -c tests/assignment.coffee
+coffee -c tests/attribute.coffee
+coffee -c tests/comp.coffee
+coffee -c tests/declaration1.coffee
+coffee -c tests/for.coffee
+coffee -c tests/func_call.coffee
+coffee -c tests/function.coffee
+coffee -c tests/identifier.coffee
+coffee -c tests/if.coffee
+coffee -c tests/if_else.coffee
+coffee -c tests/link1.coffee
+coffee -c tests/link2.coffee
+coffee -c tests/logic.coffee
+coffee -c tests/math.coffee
+coffee -c tests/misc1.coffee
+coffee -c tests/misc2.coffee
+coffee -c tests/misc3.coffee
+coffee -c tests/misc4.coffee
+coffee -c tests/misc5.coffee
+coffee -c tests/number.coffee
+coffee -c tests/rule.coffee
+coffee -c tests/stringliteral1.coffee
+coffee -c tests/sum.coffee
+coffee -c tests/switch.coffee
+coffee -c tests/systemAttribue.coffee
+coffee -c tests/toObject.coffee
+coffee -c tests/while.coffee
+coffee -c rules/clearing_rules_common.ruleheader.coffee
+coffee -c rules/opening_hours_rules_common.ruleheader.coffee
+coffee -c rules/Eligible_For_Interoperability.rulebase.coffee
+coffee -c rules/markitwire_clearing_rules_common.ruleheader.coffee
+node mpjs.js rules/Participant_Clearing.rulebase.mp -o rules/Participant_Clearing.rulebase.coffee
+node mpjs.js rules/clearing_house_common_CME.ruleheader.mp -o rules/clearing_house_common_CME.ruleheader.coffee
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+toObject enter
+StringLiteral.isList: Compounding Method;Compounding Method 2
+toObject enter
+node mpjs.js rules/Clearing_House_EUREX.rulebase.mp -o rules/Clearing_House_EUREX.rulebase.coffee
+StringLiteral.emitList "Compounding Method;Compounding Method 2"
+node mpjs.js rules/Clearing_House_HKEX.rulebase.mp -o rules/Clearing_House_HKEX.rulebase.coffee
+VariableRef.isList payperiods
+toObject enter
+node mpjs.js rules/clearing_house_common_ICE.ruleheader.mp -o rules/clearing_house_common_ICE.ruleheader.coffee
+node mpjs.js rules/Clearing_House_IDCG.rulebase.mp -o rules/Clearing_House_IDCG.rulebase.coffee
+toObject enter
+toObject enter
+node mpjs.js rules/Clearing_House_JSCC.rulebase.mp -o rules/Clearing_House_JSCC.rulebase.coffee
+VariableRef.isList centres
+VariableRef.isList centres
+node mpjs.js rules/Clearing_House_KDPW.rulebase.mp -o rules/Clearing_House_KDPW.rulebase.coffee
+node mpjs.js rules/Clearing_House_KRX.rulebase.mp -o rules/Clearing_House_KRX.rulebase.coffee
+node mpjs.js rules/Clearing_House_LCH.SA.rulebase.mp -o rules/Clearing_House_LCH.SA.rulebase.coffee
+node mpjs.js rules/clearing_house_common_LCH.ruleheader.mp -o rules/clearing_house_common_LCH.ruleheader.coffee
+toObject enter
+node mpjs.js rules/Clearing_House_NASDAQ.rulebase.mp -o rules/Clearing_House_NASDAQ.rulebase.coffee
+node mpjs.js rules/Clearing_House_NONE.rulebase.mp -o rules/Clearing_House_NONE.rulebase.coffee
+node mpjs.js rules/Clearing_House_OCC.rulebase.mp -o rules/Clearing_House_OCC.rulebase.coffee
+node mpjs.js rules/Clearing_House_SGX.rulebase.mp -o rules/Clearing_House_SGX.rulebase.coffee
+node mpjs.js rules/Clearing_House_TEST.rulebase.mp -o rules/Clearing_House_TEST.rulebase.coffee
+VariableRef.isList centres
+VariableRef.isList centres
+VariableRef.isList centres
+VariableRef.isList centres
+node mpjs.js rules/MarkitWire_Clearing.rulebase.mp -o rules/MarkitWire_Clearing.rulebase.coffee
+node mpjs.js rules/MarkitWire_DeReclearing.rulebase.mp -o rules/MarkitWire_DeReclearing.rulebase.coffee
+node mpjs.js rules/MarkitWire_PartiesEligibility.rulebase.mp -o rules/MarkitWire_PartiesEligibility.rulebase.coffee
+coffee -c rules/Participant_Clearing.rulebase.coffee
+coffee -c rules/clearing_house_common_CME.ruleheader.coffee
+coffee -c rules/Clearing_House_EUREX.rulebase.coffee
+coffee -c rules/Clearing_House_HKEX.rulebase.coffee
+coffee -c rules/clearing_house_common_ICE.ruleheader.coffee
+coffee -c rules/Clearing_House_IDCG.rulebase.coffee
+coffee -c rules/Clearing_House_JSCC.rulebase.coffee
+coffee -c rules/Clearing_House_KDPW.rulebase.coffee
+coffee -c rules/Clearing_House_KRX.rulebase.coffee
+coffee -c rules/Clearing_House_LCH.SA.rulebase.coffee
+coffee -c rules/clearing_house_common_LCH.ruleheader.coffee
+coffee -c rules/Clearing_House_NASDAQ.rulebase.coffee
+coffee -c rules/Clearing_House_NONE.rulebase.coffee
+coffee -c rules/Clearing_House_OCC.rulebase.coffee
+coffee -c rules/Clearing_House_SGX.rulebase.coffee
+coffee -c rules/Clearing_House_TEST.rulebase.coffee
+coffee -c rules/MarkitWire_Clearing.rulebase.coffee
+coffee -c rules/MarkitWire_DeReclearing.rulebase.coffee
+coffee -c rules/MarkitWire_PartiesEligibility.rulebase.coffee
+node mpjs.js rules/Clearing_House_CME.rulebase.mp -o rules/Clearing_House_CME.rulebase.coffee
+node mpjs.js rules/Clearing_House_CMECE.rulebase.mp -o rules/Clearing_House_CMECE.rulebase.coffee
+toObject enter
+node mpjs.js rules/Clearing_House_CMEVCON.rulebase.mp -o rules/Clearing_House_CMEVCON.rulebase.coffee
+node mpjs.js rules/Clearing_House_ICE.rulebase.mp -o rules/Clearing_House_ICE.rulebase.coffee
+node mpjs.js rules/Clearing_House_ICED2D.rulebase.mp -o rules/Clearing_House_ICED2D.rulebase.coffee
+VariableRef.isList chOpenData
+Declaration.isList { name: 'ServerFunction',
+  args: 
+   { first: { text: 'ClearingHouseOpeningHoursData', lineno: 40 },
+     rest: [ [Object], [Object], [Object], [Object] ],
+     sep: ', ',
+     lineno: 41 },
+  lineno: 41 }
+node mpjs.js rules/Clearing_House_LCH.rulebase.mp -o rules/Clearing_House_LCH.rulebase.coffee
+toObject enter
+node mpjs.js rules/Clearing_House_LCHVCON.rulebase.mp -o rules/Clearing_House_LCHVCON.rulebase.coffee
+coffee -c rules/Clearing_House_CME.rulebase.coffee
+coffee -c rules/Clearing_House_CMECE.rulebase.coffee
+coffee -c rules/Clearing_House_CMEVCON.rulebase.coffee
+coffee -c rules/Clearing_House_ICE.rulebase.coffee
+coffee -c rules/Clearing_House_ICED2D.rulebase.coffee
+coffee -c rules/Clearing_House_LCH.rulebase.coffee
+coffee -c rules/Clearing_House_LCHVCON.rulebase.coffee
+node check_rules.js
+rules.length 19
+{ 'Different Payment And Roll Holiday Centres': 'A trade with different Payment and Roll Holiday Centres cannot be cleared.' }
+Time LCH IRS 1st 0.001948
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 1st 0.000774
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 2nd 0.000192
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 3rd 0.033724
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 4th 0.000599
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 5th 0.000130
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 6th 0.000321
+{}
+Time CME FRA 1st 0.000696
+{}
+Time EUREX FRA 1st 0.000501
+{}
+Time CME FRA 2nd 0.000247
+{}
+Time CME FRA 3rd 0.000050
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 1st 0.000237
+8 deals * 19 rules * 1000 iterations = 152000
+Time average over loop: 0.000026s
+{}
+Time LCH after loop: 0.000073
+{ 'Index Fixing Days': 'Fixing Days Offset must be -2.',
+  'Index Holidays': 'Fixing Holiday Centres must include GBLO.',
+  'Currency Payment Holiday': 'A GBP trade where the selected Payment Holiday Centres exclude GBLO cannot be cleared.',
+  'Minimum Notional': 'A trade with a Notional less than 1 currency unit cannot be cleared.',
+  'Additional Payment 1 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'Additional Payment 2 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Float Day Convention': 'A FRA trade with the specified Float Convention cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 0 day(s).',
+  'FRA Value Date - Today greater than or equal to Minimum Time to Settlement': 'Time to Settlement must be greater than or equal to 2 business day(s). ',
+  'First Fixing Index Holidays': 'The trade\'s First Fixing Holiday Centres must include GBLO if the index is USD-LIBOR-BBA to be eligible for clearing.' }
+Time LCH Big Deal 1st: 0.054537
+{ 'Index Fixing Days': 'Fixing Days Offset must be -2.',
+  'Index Holidays': 'Fixing Holiday Centres must include GBLO.',
+  'Currency Payment Holiday': 'A GBP trade where the selected Payment Holiday Centres exclude GBLO cannot be cleared.',
+  'Minimum Notional': 'A trade with a Notional less than 1 currency unit cannot be cleared.',
+  'Additional Payment 1 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'Additional Payment 2 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Float Day Convention': 'A FRA trade with the specified Float Convention cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 0 day(s).',
+  'FRA Value Date - Today greater than or equal to Minimum Time to Settlement': 'Time to Settlement must be greater than or equal to 2 business day(s). ',
+  'First Fixing Index Holidays': 'The trade\'s First Fixing Holiday Centres must include GBLO if the index is USD-LIBOR-BBA to be eligible for clearing.' }
+Time LCH Big Deal 2nd: 0.183999
+{ 'Index Fixing Days': 'Fixing Days Offset must be -2.',
+  'Index Holidays': 'Fixing Holiday Centres must include GBLO.',
+  'Currency Payment Holiday': 'A GBP trade where the selected Payment Holiday Centres exclude GBLO cannot be cleared.',
+  'Minimum Notional': 'A trade with a Notional less than 1 currency unit cannot be cleared.',
+  'Additional Payment 1 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'Additional Payment 2 Currency': 'A trade with an additional payment currency different to the trade currency cannot be cleared.',
+  'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Float Day Convention': 'A FRA trade with the specified Float Convention cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 0 day(s).',
+  'FRA Value Date - Today greater than or equal to Minimum Time to Settlement': 'Time to Settlement must be greater than or equal to 2 business day(s). ',
+  'First Fixing Index Holidays': 'The trade\'s First Fixing Holiday Centres must include GBLO if the index is USD-LIBOR-BBA to be eligible for clearing.' }
+Time LCH Big Deal 3rd: 0.165350
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 1st: 0.000256
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 2nd: 0.000301
+{ 'FRA Float Day Basis': 'A FRA trade with the specified Currency and Float Day Basis cannot be cleared.',
+  'FRA Fixing Date': 'Fixing Date must be greater than or equal to today + 1 day(s).',
+  'FRA Value Date': 'Start Date must be greater than or equal to Fixing Date + 1 day(s).' }
+Time LCH FRA 3rd: 0.000117
+
+Compilation finished at Sat Mar 23 12:38:29

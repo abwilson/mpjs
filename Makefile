@@ -6,7 +6,7 @@
 
 files.mp := $(wildcard tests/*.mp rules/*.mp)
 
-mpjs = emitter.js grammar.js mpjs.js nodes.js functions.js clearing_houses.js
+mpjs = emitter.js grammar.js mpjs.js nodes.js functions.js list_clearing_houses.js
 
 .PHONY: all
 all: check_rules.js $(mpjs) $(files.mp:%.mp=%.js) functions.js rulebase.js

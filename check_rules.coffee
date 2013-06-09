@@ -283,6 +283,9 @@ time LCH, bigDeal, 'Time LCH Big Deal 3rd:'
 time LCH, lchFra, 'Time LCH FRA 1st:'
 time LCH, lchFra, 'Time LCH FRA 2nd:'
 time LCH, lchFra, 'Time LCH FRA 3rd:'
+time LCH, lchFra, 'Time LCH FRA 4th:'
+time LCH, lchFra, 'Time LCH FRA 5th:'
+time LCH, lchFra, 'Time LCH FRA 6th:'
 
 
             

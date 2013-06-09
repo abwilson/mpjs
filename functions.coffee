@@ -49,12 +49,16 @@ funs.GetListProperty = (list, key, property) ->
     # log "ListProperty key = #{key}, propert = #{property}"
     list[key]?[property]
 
-funs.ListContains = (l, e) ->
-    if l?.length
-        e in l
-    else
-        e in toArray l
-   
+funs.ListContains = do ->
+    #
+    # Map from types to implementation for that type.
+    # 
+    impls =
+        'array':  (l, e) -> e of l
+        'string': (l, e) -> l.indexOf e >= 0
+
+    (l, e) -> impls[type(l)]?(l, e)
+        
 funs.Months = (x) -> 18
 
 funs.NowGMT = -> Date.now()

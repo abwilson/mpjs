@@ -1,0 +1,17 @@
+#
+# In this dir ingore any js files since they are generated.
+#
+*.js
+*.d
+*~
+#
+# Don't check in any mark pascal lists.
+#
+*.mpl
+#
+# Ignore anything under rules since we don't want to check in
+# proprietrary files.
+#
+rules/*
+
+tests/*.coffee
