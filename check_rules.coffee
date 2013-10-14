@@ -194,26 +194,28 @@ deals = [
 
 #return 0
 
-rulesByName =
-    CME:     require './rules/Clearing_House_CME.rulebase'
-    CMECE:   require './rules/Clearing_House_CMECE.rulebase'
-    CMEVCON: require './rules/Clearing_House_CMEVCON.rulebase'
-    EUREX:   require './rules/Clearing_House_EUREX.rulebase'
-    HKEX:    require './rules/Clearing_House_HKEX.rulebase'
-    ICE:     require './rules/Clearing_House_ICE.rulebase'
-    ICED2D:  require './rules/Clearing_House_ICED2D.rulebase'
-    IDCG:    require './rules/Clearing_House_IDCG.rulebase'
-    JSCC:    require './rules/Clearing_House_JSCC.rulebase'
-    KDPW:    require './rules/Clearing_House_KDPW.rulebase'
-    KRX:     require './rules/Clearing_House_KRX.rulebase'
-    SA:      require './rules/Clearing_House_LCH.SA.rulebase'
-    LCH:     require './rules/Clearing_House_LCH.rulebase'
-    LCHVCON: require './rules/Clearing_House_LCHVCON.rulebase'
-    NASDAQ:  require './rules/Clearing_House_NASDAQ.rulebase'
-    NONE:    require './rules/Clearing_House_NONE.rulebase'
-    OCC:     require './rules/Clearing_House_OCC.rulebase'
-    SGX:     require './rules/Clearing_House_SGX.rulebase'
-    TEST:    require './rules/Clearing_House_TEST.rulebase'
+
+rulesByName = require "./rules"
+
+    # CME:     require './rules/Clearing_House_CME.rulebase'
+    # CMECE:   require './rules/Clearing_House_CMECE.rulebase'
+    # CMEVCON: require './rules/Clearing_House_CMEVCON.rulebase'
+    # EUREX:   require './rules/Clearing_House_EUREX.rulebase'
+    # HKEX:    require './rules/Clearing_House_HKEX.rulebase'
+    # ICE:     require './rules/Clearing_House_ICE.rulebase'
+    # ICED2D:  require './rules/Clearing_House_ICED2D.rulebase'
+    # IDCG:    require './rules/Clearing_House_IDCG.rulebase'
+    # JSCC:    require './rules/Clearing_House_JSCC.rulebase'
+    # KDPW:    require './rules/Clearing_House_KDPW.rulebase'
+    # KRX:     require './rules/Clearing_House_KRX.rulebase'
+    # SA:      require './rules/Clearing_House_LCH.SA.rulebase'
+    # LCH:     require './rules/Clearing_House_LCH.rulebase'
+    # LCHVCON: require './rules/Clearing_House_LCHVCON.rulebase'
+    # NASDAQ:  require './rules/Clearing_House_NASDAQ.rulebase'
+    # NONE:    require './rules/Clearing_House_NONE.rulebase'
+    # OCC:     require './rules/Clearing_House_OCC.rulebase'
+    # SGX:     require './rules/Clearing_House_SGX.rulebase'
+    # TEST:    require './rules/Clearing_House_TEST.rulebase'
 
 {
     CME, CMECE, CMEVCON, EUREX, HKEX, ICE, ICED2D, IDCG, JSCC, KDPW,
@@ -235,7 +237,7 @@ time = (r, d, m) ->
     log m, toUSec diff[1]
 
 time LCH, lchIrs, 'Time LCH IRS 1st'
-#return 0
+return 0
 
 time LCH, lchFra, 'Time LCH FRA 1st'
 time LCH, lchFra, 'Time LCH FRA 2nd'
@@ -287,8 +289,4 @@ time LCH, lchFra, 'Time LCH FRA 4th:'
 time LCH, lchFra, 'Time LCH FRA 5th:'
 time LCH, lchFra, 'Time LCH FRA 6th:'
 
-
-            
 #console.log r
-
-

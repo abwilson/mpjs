@@ -212,25 +212,35 @@ class exports.ParamDecl extends SyntaxNode
     emitImpl: (buf) ->
         buf.put @name
 
-class exports.RuleRequire extends TopLevel
-    constructor: (lineno, @require) ->
+class exports.RuleProperty extends TopLevel
+    constructor: (lineno, @name, @expr) ->
         super(lineno)
 
     emitImpl: (buf) ->
-        buf.putln "require: (env) -> "
+        buf.putln @name, ": (env) -> "
         buf.push()
-        buf.putln @require
+        buf.putln @expr
         buf.pop()
 
-class exports.RuleMessage extends TopLevel
-    constructor: (lineno, @message) ->
-        super(lineno)
+# class exports.RuleRequire extends TopLevel
+#     constructor: (lineno, @expr) ->
+#         super(lineno)
 
-    emitImpl: (buf) ->
-        buf.putln "message: (env) -> "
-        buf.push()
-        buf.putln @message
-        buf.pop()
+#     emitImpl: (buf) ->
+#         buf.putln "require: (env) -> "
+#         buf.push()
+#         buf.putln @expr
+#         buf.pop()
+
+# class exports.RuleMessage extends TopLevel
+#     constructor: (lineno, @expr) ->
+#         super(lineno)
+
+#     emitImpl: (buf) ->
+#         buf.putln "message: (env) -> "
+#         buf.push()
+#         buf.putln @expr
+#         buf.pop()
             
 class exports.Rule extends SyntaxNode
     constructor: (lineno, @name, @message, @require) ->
@@ -377,10 +387,10 @@ class exports.Declaration extends SyntaxNode
             buf.put (if @isArray? then '[]' else 'undefined')
 
     isList: ->
-        log 'Declaration.isList', @init
+        _log 'Declaration.isList', @init
         @init?.isList()
     isObject: ->
-        log 'Declaration.isObject', @init
+        _log 'Declaration.isObject', @init
         @init?.isObject()
 
 class exports.Function extends SyntaxNode
@@ -566,9 +576,10 @@ class exports.BinaryOp extends SyntaxNode
     breaks: ['+', '-', '*', 'and', 'AND', 'not', 'NOT', 'or', 'OR', 'is']
 
     mapOp: (op) -> @operators[op] ? op
-    constructor: (lineno, @op, @rhs, what) ->
+    constructor: (lineno, @op, @rhs, @what) ->
         super(lineno)
         _log 'BinaryOp', (util.inspect @, false, 10), what
+        
     emitImpl: (buf) ->
         _log 'BinaryOp.emit', (util.inspect @, false, 10)
         buf.put " #{@mapOp @op} "
@@ -576,7 +587,7 @@ class exports.BinaryOp extends SyntaxNode
         buf.put @rhs
 
 class exports.BinaryExpr extends SyntaxNode
-    constructor: (lineno, @lhs, @rhs, what) ->
+    constructor: (lineno, @lhs, @rhs, @what) ->
         super(lineno)
         _log 'BinaryEpr', (util.inspect @, false, 10), what
         assert @lhs and @rhs, "BinaryOp buggered: lhs: #{lhs}, rhs: #{rhs}."

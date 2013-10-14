@@ -30,6 +30,7 @@ class Rule
     # result of message.
     # 
     check: (deal, result, env={}) ->
+        # log "Checking: ", @name
         passed = @require.call deal, env
         # log "    Checking #{@name}", passed
         unless passed
@@ -40,7 +41,10 @@ class Set
     check: (deal, result) ->
         # log 'Set.check', @name, (not @appliesIf?) or @appliesIf.call deal
         if (not @appliesIf?) or @appliesIf.call deal
-            r deal, result for r in @rules
+            for r in @rules
+                # log "Checking: ", r
+                r deal, result
+#            r deal, result for r in @rules
 
 module.exports = class RuleBase
     funs: {}
@@ -51,7 +55,10 @@ module.exports = class RuleBase
     check: (deal) =>
         @bind deal
         result = {}
-        s.check deal, result for s in @sets
+        for s in @sets
+            # log "Checking: ", s
+            s.check deal, result for s in @sets
+#        s.check deal, result for s in @sets
         result
 
     includeRule: (n, r) -> @rules[n] = r
@@ -62,7 +69,7 @@ module.exports = class RuleBase
     # Include the definitions from another RuleBase into this one.
     # 
     include: (filename) =>
-        # console.log 'including', filename, ' from ', @module.id
+        # log 'including', filename, ' from ', @module.id
         inc = @module.require(filename)
         @includeRule n, r for n, r of inc.rules if inc?.rules
         if inc?.sets
